@@ -50,17 +50,30 @@ export default function App() {
   }, []);
   */
 
-//para intentar mapearlo... continuar
+//para intentar mapearlo
 
 /*const [pokemones, setPokemones] = useState([]);
   const gFetchApi = (url) => {
     fetch(url)
       .then((resp) => resp.json())
       .then((data) => setPokemones(data.results))
-      .then((rta) => console.log(rta))
+      
       .catch((err) => console.log(err));
   };
   useEffect(() => {
     const url = 'https://pokeapi.co/api/v2/pokemon/?offset=20&limit=10';
     gFetchApi(url);
-  }, []);*/
+  }, []);
+
+  return (
+    <div>
+      {
+        pokemones.map((pokemon=>{
+          return <p>{pokemon.name}</p>
+        }))
+      }
+      <h1>Hello StackBlitz!</h1>
+      <p>Start editing to see some magic happen :)</p>
+    </div>
+  );
+*/
